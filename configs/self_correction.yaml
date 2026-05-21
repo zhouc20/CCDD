@@ -1,0 +1,10 @@
+path: ???
+samples_path: ???
+corrected_samples_path: ???
+batch_size: 16
+num_denoising_steps: 128
+temp: 0.1
+t0: 0.01
+max_patience: 32
+tokens_per_step: 1
+metrics_path: metrics.csv

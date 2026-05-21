@@ -1,0 +1,9 @@
+path: ???
+batch_size: 16
+num_samples: 16
+max_length: 512
+num_denoising_steps: 128
+min_p: 0.0
+samples_path: samples.pt
+disc_type: ccdd
+cont_type: ddpm

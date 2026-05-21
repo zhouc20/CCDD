@@ -1,0 +1,7 @@
+type: psgd
+lr: 1e-4
+beta: 0.9
+weight_decay: 0.0
+grad_clip_norm: 1.0
+mars: false
+caution: false

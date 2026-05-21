@@ -1,0 +1,32 @@
+defaults:
+  - logging: default
+  - data: owt
+  - model: small
+  - optimizer: adam
+  - _self_
+
+model:
+  type: diffusion
+  diffusion_process: ccdd
+  p_uniform: 0.0
+  t_eps: 1e-4
+
+training:
+  resume: null
+  seed: 1
+  train_batch_size: 64
+  eval_batch_size: 64
+  num_train_steps: 500_000
+  lr_schedule: cosine
+  warmup_steps: 10000
+  low_discrepancy_sampling: True
+  dtype: bf16
+  compile_model: True
+
+loss:
+  loss_type: ccdd
+  loss_weighting: dynamic  # [dynamic, clip, none]
+  min_loss_weight: 0.0
+  max_loss_weight: 2.0
+  loss_scale: 1.0
+  reduction: tokenmean

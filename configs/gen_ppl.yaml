@@ -1,0 +1,6 @@
+samples_path: ???
+model_tokenizer: gpt2
+pretrained_model: gpt2-large # e.g. google/gemma-2-9b
+batch_size: 1
+metrics_path: metrics.json
+torch_compile: false

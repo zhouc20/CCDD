@@ -1,0 +1,6 @@
+defaults:
+  - defaults
+
+dataset_name: Skylion007/openwebtext
+dataset_subset: plain_text
+trust_remote_code: True

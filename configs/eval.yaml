@@ -1,0 +1,3 @@
+path: ???
+batch_size: 32
+use_gpt2: false

@@ -1,0 +1,10 @@
+test_size: 100000
+num_workers: 4
+tokenizer_name: gpt2
+pre_tokenize: false
+sequence_packing: false
+max_add_padding: 0
+trust_remote_code: True
+dataset_subset: null
+cache_dir: null
+split_sequences: false

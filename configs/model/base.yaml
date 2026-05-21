@@ -1,0 +1,6 @@
+hidden_size: 1024
+cond_dim: 128
+n_blocks: 24
+n_heads: 16
+dropout: 0.0
+max_seq_len: 512

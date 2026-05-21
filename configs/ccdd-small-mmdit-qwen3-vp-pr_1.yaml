@@ -1,0 +1,59 @@
+defaults:
+  - logging: default
+  - data: owt
+  - model: small
+  - optimizer: adam
+  - _self_
+
+data:
+  pre_tokenize: true
+  sequence_packing: true
+  tokenizer_name: Qwen/Qwen3-Embedding-0.6B
+
+model:
+  type: mmdit
+  n_single_list: [1, 1, 1, 1, 1, 1]
+  diffusion_process: coevolutionary
+  t_eps: 1e-4
+  pretrained_model_name: Qwen/Qwen3-Embedding-0.6B
+  contextualize_vae: True
+  gamma: 4.0
+  latent_dim: 32 
+  vae_normalize: true
+  share_adaln: true
+  dropout: 0.1
+  use_continuous_output_norm: false
+  cont_schedule: vp_linear  # vp_linear
+
+training:
+  resume: null
+  seed: 42
+  train_batch_size: 64
+  eval_batch_size: 64
+  num_train_steps: 1000_000
+  lr_schedule: constant
+  warmup_steps: 10000
+  low_discrepancy_sampling: True
+  dtype: bf16
+  compile_model: True
+  grad_accum_steps: 1
+  # === Coevolutionary Noise Schedule ===
+  p_u_max: 0.0
+  p_u_min: 0.0
+  p_r_max: 1.0  # this is the upper bound of the ELBO; set p_r_max=0.0 for real tasks, which is much easier
+  p_r_min: 0.0
+  # === Advanced Noise Injection Strategies ===
+  p_drop_continuous: 0.0
+  p_drop_discrete: 0.0
+  forcing_factor: 0.0
+  ar_prior_factor: 0.0
+
+loss:
+  loss_type: ccdd
+  loss_weighting: dynamic  # [dynamic, clip, none]
+  min_loss_weight: 0.0
+  max_loss_weight: 2.0
+  loss_scale: 1.0
+  reduction: tokenmean
+  weight_type: ddpm_x  # Options: uniform, snr, min_snr, inv_snr, sqrt_snr, ddpm_x, karras, edm
+  cont_weight: 1.0

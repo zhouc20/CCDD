@@ -1,0 +1,25 @@
+defaults:
+  - logging: default
+  - data: owt
+  - model: small
+  - optimizer: adam
+  - _self_
+
+model:
+  type: autoregressive
+
+training:
+  resume: null
+  seed: 1
+  train_batch_size: 64
+  eval_batch_size: 64
+  num_train_steps: 1000_000
+  lr_schedule: cosine
+  warmup_steps: 10000
+  dtype: bf16
+  compile_model: True
+
+loss:
+  loss_type: ar
+  loss_scale: 1.0
+  reduction: tokenmean  # not used for AR loss

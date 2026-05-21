@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ccdd"
+version = "0.1.0"
+description = "Coevolutionary Continuous-Discrete Diffusion for text generation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "CCDD authors" }]
+dependencies = [
+    "accelerate>=1.3.0",
+    "datasets>=3.0.1",
+    "einops>=0.8.0",
+    "evaluate>=0.4.3",
+    "heavyball>=1.4.3",
+    "huggingface-hub>=0.25.1",
+    "hydra-core>=1.3.2",
+    "matplotlib>=3.9.2",
+    "numpy>=1.26.4",
+    "omegaconf>=2.3.0",
+    "pandas>=2.2.3",
+    "scipy>=1.14.1",
+    "sentencepiece>=0.2.0",
+    "torch>=2.4.0",
+    "tqdm>=4.66.5",
+    "transformers>=4.45.1",
+    "unidecode>=1.4.0",
+    "wandb>=0.18.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools]
+packages = [
+    "ccdd"
+]

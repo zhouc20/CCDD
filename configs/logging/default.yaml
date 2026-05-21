@@ -1,0 +1,8 @@
+run_name: null
+num_eval_batches: 128
+log_freq: 10
+eval_freq: 2000
+save_freq: 2000
+save_dir: outputs/checkpoints
+wandb_entity: discrete_diffusion
+wandb_project: "ccdd"

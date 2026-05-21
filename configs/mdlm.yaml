@@ -1,0 +1,28 @@
+defaults:
+  - logging: default
+  - data: owt
+  - model: small
+  - optimizer: adam
+  - _self_
+
+model:
+  type: diffusion
+  diffusion_process: mdlm
+  t_eps: 1e-4
+
+training:
+  resume: null
+  seed: 1
+  train_batch_size: 64
+  eval_batch_size: 64
+  num_train_steps: 1000_000
+  lr_schedule: cosine
+  warmup_steps: 10000
+  low_discrepancy_sampling: True
+  dtype: bf16
+  compile_model: True
+
+loss:
+  loss_type: mdlm
+  loss_scale: 1.0
+  reduction: tokenmean
