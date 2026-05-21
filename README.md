@@ -1,4 +1,4 @@
-# Official Repository for Coevolutionary Continuous Discrete Diffusion: Make Your Diffusion Language Model a Latent Reasoner | ICML 2026
+# Official Repository for ICML 2026 Paper: CCDD
 
 <h1>Coevolutionary Continuous Discrete Diffusion: Make Your Diffusion Language Model a Latent Reasoner | ICML 2026</h1>
 
