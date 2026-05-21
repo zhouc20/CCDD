@@ -1,6 +1,6 @@
 # Official Repository for ICML 2026 Paper: CCDD
 
-<h1>Coevolutionary Continuous Discrete Diffusion: Make Your Diffusion Language Model a Latent Reasoner | ICML 2026</h1>
+<h2>Coevolutionary Continuous Discrete Diffusion: Make Your Diffusion Language Model a Latent Reasoner | ICML 2026</h2>
 
 <div>
     <a href="https://homepage.zhouc.ai/" target="_blank">Cai Zhou</a><sup>1,2</sup> | 
@@ -18,7 +18,7 @@
 <br>
 
 <div>
-    <sup></sup><sup>1</sup> Massachusetts Institute of Technology<br><sup>2</sup> Microsoft Research<br><sup>3</sup> Toyota Technological Institute at Chicago<br><sup>4</sup> Peking University<br><sup>5</sup> Tsinghua University
+    <sup></sup><sup>1</sup> Massachusetts Institute of Technology &nbsp;&nbsp;<sup>2</sup> Microsoft Research &nbsp;&nbsp;<sup>3</sup> Toyota Technological Institute at Chicago &nbsp;&nbsp;<sup>4</sup> Peking University &nbsp;&nbsp;<sup>5</sup> Tsinghua University
 </div>
 
 <br>
